@@ -1,15 +1,9 @@
 {
   "version": 2,
   "name": "script-to-video-frontend",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "framework": "create-react-app",
   "routes": [
     {
       "src": "/static/(.*)",
@@ -23,6 +17,6 @@
     }
   ],
   "env": {
-    "REACT_APP_API_URL": "@api_url"
+    "REACT_APP_API_URL": "https://script-to-video-api.onrender.com"
   }
 }
