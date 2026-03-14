@@ -1,0 +1,75 @@
+# API 配置模板
+# 复制此文件为 api_config.yaml 并填入你的 API Key
+
+# 文本分析模型
+text_models:
+  moonshot:
+    api_key: ""  # Kimi API Key
+    base_url: "https://api.moonshot.cn/v1"
+    model: "moonshot-v1-128k"
+  
+  zhipu:
+    api_key: ""  # 智谱 API Key
+    base_url: "https://open.bigmodel.cn/api/paas/v4"
+    model: "glm-4"
+  
+  ollama:
+    base_url: "http://localhost:11434"
+    model: "llama2"
+
+# 图像生成模型
+image_models:
+  # 免费选项
+  pollinations:
+    enabled: true
+    base_url: "https://image.pollinations.ai/prompt"
+  
+  leonardo:
+    api_key: ""  # Leonardo API Key
+    base_url: "https://cloud.leonardo.ai/api/rest/v1"
+  
+  # 付费选项
+  openai:
+    api_key: ""  # OpenAI API Key
+    model: "dall-e-3"
+  
+  midjourney:
+    api_key: ""  # Midjourney API Key (通过第三方服务)
+    base_url: ""
+  
+  aliyun_wanxiang:
+    api_key: ""  # 阿里云通义万相
+    base_url: "https://dashscope.aliyuncs.com/api/v1"
+  
+  jimeng:
+    api_key: ""  # 即梦 API Key
+    base_url: ""
+
+# 视频生成模型
+video_models:
+  # 免费选项
+  kling:
+    api_key: ""  # 可灵 API Key
+    base_url: "https://api.klingai.com"
+  
+  jimeng:
+    api_key: ""  # 即梦 API Key
+    base_url: ""
+  
+  runway:
+    api_key: ""  # Runway API Key
+    base_url: "https://api.runwayml.com"
+  
+  pika:
+    api_key: ""  # Pika API Key
+    base_url: "https://api.pika.art"
+  
+  luma:
+    api_key: ""  # Luma API Key
+    base_url: "https://api.lumalabs.ai"
+
+# 默认配置
+defaults:
+  text_model: "moonshot"
+  image_model: "pollinations"
+  video_model: "kling"
